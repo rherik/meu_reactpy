@@ -15,5 +15,13 @@ def button():
                 PrintButton("Pause", "Paused"),
             )
 
+@component
+def photo():
+    return html.img({
+                "src": "favicon.png",
+                "style": {"width": "50%"},
+                }
+            )
+
 app = Flask(__name__)
-configure(app, button)
+configure(app, photo)
